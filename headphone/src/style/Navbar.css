@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+   background-size: cover;
+   -webkit-background-size:cover ;
+   background-size: cover;
+   background-position: center center;
+   height: 100vh;
+  }
+  .navcontainer{
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 100000;
+    width: 100%;
+    height: 90px;
+    border: 0px solid orange;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+  }
+  .navcontainer a{
+    text-decoration: none;
+    color: black;
+  }
+  .weblogo{
+    margin-bottom: 0px;
+    width: 14%;
+    height:70px;
+    border: 0px solid red;
+  }
+  .weblogo img{
+    width: 130px;
+    height: 70px;
+  }
+  
+  /* ...................... */
+  .wrapper{
+    border: 0px solid red;
+    width: 75%;
+    margin: 0 auto;
+   
+  }
+  
+  .wrapper> ul{
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .wrapper ul{
+    list-style: none;
+    }
+  
+  .wrapper ul li{
+   
+    width: 100%;
+    border: 3px solid rgb(59, 36, 189);
+    height: 50px;
+    line-height: 50px;
+    color:rgb(0, 0, 0);
+    /* float: left; */
+    font-size: 14px;
+    position: relative;
+  }
+  .wrapper ul li{
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    border: 2px solid #f9f9f9;;
+  }
+  /*  */
+  .text{
+    width: 100%;
+    height: 400px;
+    border: 2px solid red;
+    background-color: aqua;
+    overflow-y: auto;
+    display: none;
+  }
+  
+  /*  */
+  .wrapper ul li:hover{
+    width: 100%;
+    background: #f9f9f9;
+  }
+  .wrapper ul  ul{
+    display: none;
+  }
+  .wrapper ul li:hover>ul{
+    /* width: 100%; */
+  display: block;
+  }
+  
+  
+  .wrapper ul ul li{
+    width: 100%;
+    border: 0px solid white;
+    background-color: #f9f9f9;
+  }
+  .wrapper ul ul li:hover{
+    background-color: #817f7f;
+    color: #fff;
+  }
+  .navlogin{
+    width: 20%;
+  height: 70px;
+  border: 0px solid;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+      align-items: center;
+      font-weight: 500;
+  }
+  

@@ -1,0 +1,46 @@
+.headgap{
+    width: 100%;
+    height: 90px;
+}
+.sinle_main_conatiner{
+    margin-top: 50px;
+    width: 100%;
+    height: 900px;
+    border: 1px solid;
+display: flex;
+
+}
+
+.singl_left_cont{
+    width: 50%;
+    height: 100vh;
+    border: 1px solid;
+}
+.singl_right_cont{
+    width: 50%;
+    height: 100vh;
+    border: 3px solid;
+}
+.singl_left_cont img{
+    width: 90%;
+}
+.right_product_name{
+    width: 100%;
+    height: 90px;
+    border: 1px solid;
+    text-align: left;
+    line-height: 40px;
+}
+.right_product_name{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.right_prduct-second{
+    width: 100%;
+    height: 90px;
+    border: 2px solid;
+    text-align: left;
+    line-height: 40px;
+    margin-left: 20px;
+    display: flex
+}
