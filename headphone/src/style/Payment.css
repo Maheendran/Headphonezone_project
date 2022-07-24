@@ -1,0 +1,99 @@
+.payment_main__container{
+    width: 100%;
+    height: 100%;
+    border: 0px solid;
+    display: flex;
+    justify-content: space-evenly;
+}
+.payment_main__container>div{
+    width: 45%;
+    height: 100%;
+    border: 0px solid;
+}
+.payment_left_logo{
+    width: 100%;
+    height: 90px;
+    border: 0px solid;
+}
+.payment_left_email{
+    width: 100%;
+    height: 200px;
+    border: 0px solid;
+}
+.payment_left_email>div{
+    display: flex;
+    justify-content: space-between;
+}
+.payment_left_email input{
+    width: 100%;
+    height: 40px;
+  margin-top: 30px;
+  outline: none;
+
+
+}
+#checkbox{
+    text-align: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+.left_gst_box{
+    width: 100%;
+    height: 150px;
+    border: 0px solid;
+    background-color: blanchedalmond;
+}
+.left_gstbox_detail{
+    width: 100%;
+    height: 50px;
+    border: 0px solid;
+
+}
+.left_gstbox_detail{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+.Shipping_address{
+    width: 100%;
+    height: 100%;
+    border: 0px solid red;
+}
+.Shipping_address input{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    outline: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    border: 0.25px solid;
+}
+.payment_right__container{
+    background-color:#f5f5f5;
+}
+.payment_right__container>div{
+    width: 100%;
+    height: 150px;
+    border: 0px solid;
+    margin-top: 30px;
+}
+.payment_right_input input{
+width: 100%;
+height: 40px;
+outline: none;
+margin-top: 30px;
+
+}
+.payment_right__container button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+
+}
+.payment_right__container button:hover{
+    background-color: grey;
+    color: white;
+}

@@ -7,6 +7,7 @@ import {FcGoogle}from "react-icons/fc"
 import {FiTwitter}from "react-icons/fi"
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
+import { NavLink } from 'react-router-dom'
 export const Loginpage = () => {
   return (
     // .......
@@ -28,7 +29,8 @@ export const Loginpage = () => {
 
 <input type="text" placeholder='E-mail' /> <br />
 <input type="text" placeholder='Password' /> <br />
-<button>LOGIN</button>
+<NavLink to='/products'><button>LOGIN</button></NavLink>
+
 </div>
 <Footer/>
     </div>

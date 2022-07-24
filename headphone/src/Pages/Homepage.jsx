@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../style/Homepage.css'
 import { Footer } from '../components/Footer'
 import { Navbar } from '../components/Navbar'
@@ -11,26 +11,36 @@ import {MdCable,MdOutlineCases,MdOutlineCable}from "react-icons/md"
 import {BiJoystick}from "react-icons/bi"
 import {DiVisualstudio}from "react-icons/di"
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 export const Homepage = () => {
-    const product=[{
-        img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Lypertek-Pureplay-Z7-014_09db4938-4d9a-4d20-80f9-2de0e1a9132b_300x.jpg?v=1626441347",
-      name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-      detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-      {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Sennhieser-IE300-05_300x.jpg?v=1616396163",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-      detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-      {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Sennheiser-HD-660-S-1160-1160-2_300x.jpg?v=1593681951",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-      detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-      {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-HiFiMAN-Sundara-1160-1160-2_300x.jpg?v=1592332661",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-      detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
+    // const product=[{
+    //     img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Lypertek-Pureplay-Z7-014_09db4938-4d9a-4d20-80f9-2de0e1a9132b_300x.jpg?v=1626441347",
+    //   name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
+    //   detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
+    //   {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Sennhieser-IE300-05_300x.jpg?v=1616396163",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
+    //   detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
+    //   {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Sennheiser-HD-660-S-1160-1160-2_300x.jpg?v=1593681951",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
+    //   detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
+    //   {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-HiFiMAN-Sundara-1160-1160-2_300x.jpg?v=1592332661",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
+    //   detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
       
-      {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/beyerdynamic-dt-770-pro-headphone-zone-13980464185407_300x.jpg?v=1579662488",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-      detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-      {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Fiio-Q3-1_300x.jpg?v=1620643675",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-      detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-      {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/sennheiser-hd-569-headphone-zone-29093551111_300x.jpg?v=1579780219",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-      detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"}]
-       
+    //   {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/beyerdynamic-dt-770-pro-headphone-zone-13980464185407_300x.jpg?v=1579662488",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
+    //   detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
+    //   {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Fiio-Q3-1_300x.jpg?v=1620643675",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
+    //   detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
+    //   {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/sennheiser-hd-569-headphone-zone-29093551111_300x.jpg?v=1579780219",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
+    //   detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"}]
+    const[popular,setPopular]=useState([])
+    const getpopular=()=>{
+        fetch(`http://localhost:8080/product`)
+        .then(res=>res.json())
+        .then((res)=>{
+          setPopular( res)})
+        } 
+    
+    useEffect(()=>{
+        getpopular()
+    }) 
   return (
     <>
       <Navbar/>
@@ -47,7 +57,7 @@ export const Homepage = () => {
 <SplideSlide  >
 <img src="https://cdn.shopify.com/s/files/1/0153/8863/files/K9ProEss_HomepageBanner_Desktop_2000x.jpg?v=1654174152" alt="" />
       <div className='innersection'>
-      <button>SHOP NOW</button>
+     <NavLink to='/products'><button className='Homepagebutton'>SHOP NOW</button></NavLink> 
       </div> </SplideSlide>
             <SplideSlide>
              <img src="https://cdn.shopify.com/s/files/1/0153/8863/files/HeadphoneZone_Mojo2-Banner_Desktop-1_2000x.jpg?v=1657284419" alt="" />
@@ -147,18 +157,20 @@ width="100%" height="700px"></iframe>
    pagination:false,drag:'free',
   gap:"1rem"}}>
 
- {product.map((e)=>{
+ {popular.map((e)=>{
           return(
-            <SplideSlide key={e.price}>
+            <SplideSlide key={e.id}>
 
-        <Link to='/singleproduct'>     <Card >
-            <img src={e.img} alt="" />
-             <h2>{e.name}</h2>
-            
+<NavLink to={`/singleproduct/${e.id}`}>
+         <Card >
+            <img src={e.url} alt="" />
+           
+             <h3>{e.name}</h3>
              <p>{e.detail}</p>
-             <h4>{e.price}</h4>
+             <h4 style={{color:"blue"}} >₹{e.price}</h4>
+            
              </Card>
-</Link>  
+         </NavLink>  
             </SplideSlide>
           )
         })}

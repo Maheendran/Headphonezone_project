@@ -6,50 +6,32 @@ import styled from "styled-components"
 import {Splide,SplideSlide} from "@splidejs/react-splide"
 import '@splidejs/react-splide/css';
 import '@splidejs/react-splide/css';
-import { Link, NavLink,} from 'react-router-dom'
+import { NavLink,} from 'react-router-dom'
+
+
+
+
 export const Products = () => {
-  const product=[{
-    img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Lypertek-Pureplay-Z7-014_09db4938-4d9a-4d20-80f9-2de0e1a9132b_300x.jpg?v=1626441347",
-  name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-  detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-  {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Sennhieser-IE300-05_300x.jpg?v=1616396163",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-  detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-  {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Sennheiser-HD-660-S-1160-1160-2_300x.jpg?v=1593681951",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-  detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-  {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-HiFiMAN-Sundara-1160-1160-2_300x.jpg?v=1592332661",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-  detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-  
-  {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/beyerdynamic-dt-770-pro-headphone-zone-13980464185407_300x.jpg?v=1579662488",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-  detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-  {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Fiio-Q3-1_300x.jpg?v=1620643675",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-  detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"},
-  {img:"https://cdn.shopify.com/s/files/1/0153/8863/products/sennheiser-hd-569-headphone-zone-29093551111_300x.jpg?v=1579780219",name:"LYPERTEK - PUREPLAY Z7",price:"₹ 9,999",
-  detail:"True Wireless Earbuds with 1 DD + 2 BA Drivers"}]
-   
+
   const[popular,setPopular]=useState([])
-
-
   const getpopular=()=>{
       fetch(`http://localhost:8080/product`)
-      // ) 
       .then(res=>res.json())
       .then((res)=>{
-        setPopular( res)
-         console.log(popular)   
-      })
-     
-  } 
+        setPopular( res)})
+      } 
   
   useEffect(()=>{
       getpopular()
   })
+// ...............................
 
 
   return (
     <div>
         <Navbar/>
         {/* ..................................... */}
-
+<div className='headgap'></div>
 <div className='mainbanner'>
 <img src="https://cdn.shopify.com/s/files/1/0153/8863/collections/KZ_Banner_1350x.jpg?v=1649762539" alt="" />
 <div className='bannerheading'>
@@ -95,33 +77,20 @@ export const Products = () => {
 
 <div className='prodfiler_box'>
 
+<select id="Filter_brand"><option value="">Brand</option>
 
+<option value="" >1Custom</option>
+<option value="">64 Audio</option>
+<option value="">Abyss</option>
+<option value="">AIAIAI</option>
+<option value="">AKG</option>
+<option value="">ALO Audio</option>
+</select> <br />
+<select name=""  id="Filter_brand"><option value="">Product type</option>
 
-  <ul><div>
-     <li>Brands
-      <ul><div className='lifilterlist'>
-        <li>headet</li>
-        <li>headet</li>
-        <li>headet</li>
-        <li>headet</li></div>
-      </ul>
-    </li>
-  </div>
-   
-  </ul>
-
-  <ul><div>
-     <li>Brands
-      <ul><div className='lifilterlist'>
-        <li>headet</li>
-        <li>headet</li>
-        <li>headet</li>
-        <li>headet</li></div>
-      </ul>
-    </li>
-  </div>
-   
-  </ul>
+<option value="">Gaming</option>
+<option value="">Wired Earphones</option>
+</select>
 <div></div>
 </div>
 
@@ -130,10 +99,10 @@ export const Products = () => {
 <div className='container_righbar'>
 <div className='right_twobox'>
 
-        <div className='smallbox_sec'>
+        <div >
 
         <img src="https://cdn.shopify.com/s/files/1/0153/8863/files/Beginner-iems-mini-banner-2-best-seller-1_580x.jpg?v=1652247257" alt="" />
-        <h2>KZ ZSN PRO X</h2>
+        
           </div>
 
             <div>
@@ -156,13 +125,12 @@ export const Products = () => {
 
           return(<div key={e.id} >
           <NavLink to={`/singleproduct/${e.id}`}>
-        
              <img src={e.url} alt="" />
              <h2>{e.name}</h2>
              <p>{e.detail}</p>
              <h3 style={{color:"blue"}} >₹{e.price}</h3>
-             <p style={{"text-decoration": "line-through"}}>₹{e.cutprice}</p>
-             </NavLink>
+             <p style={{ "text-decoration": "line-through"}} >₹{e.cutprice}</p>  </NavLink>
+         
              </div>
           )
         })}
@@ -171,28 +139,10 @@ export const Products = () => {
     
 </div>
 
- 
-        
-
-
-
-
-
-
-
 </div>
 
-
-
-<div></div>
-
 </div>
-
-
-
-
-           {/* ..................................... */}
-        <Footer/>
+ <Footer/>
     </div>
   )
 }

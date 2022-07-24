@@ -5,72 +5,91 @@
       "name":"SHANLING - UA1 PRO",
       "detail":"Portable USB DAC & Amp",
       "url":"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Shanling-UA1-Pro-Black-02_500x.jpg?v=1631948801",
-      "price":"3,499",
-      "cutprice":"4999"
+      "price":3499,
+      "cutprice":"4999",
+      "Color":"black",
+      "Type":"E1000 without Mic"
+
       
     },{
       "id": 2,
       "name":"LYPERTEK - PUREPLAY Z3",
       "detail":"True Wireless Earbuds",
       "url":"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Lypertek-PurePlay-Z3-02_500x.jpg?v=1628258447",
-      "price":"6737",
-      "cutprice":"9999"
+      "price":3439,
+      "cutprice":"9999",
+      "Color":"black",
+      "Type":"E1000 without Mic"
       
     },{
       "id": 3,
       "name":"CCA - CRA+",
       "detail":"True Wireless Earbuds",
       "url":"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-CCA-CRA-Plus-13_1100x.jpg?v=1652356320",
-      "price":"1899",
-      "cutprice":"2555"
+      "price":3434,
+      "cutprice":"2555",
+      "Color":"black",
+      "Type":"E1000 without Mic"
       
     },{
       "id": 4,
       "name":"CCA - CRA+",
       "detail":"True Wireless Earbuds",
       "url":"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Meze-99-Neo-1160-1160-2_400x.jpg?v=1591944478",
-      "price":"3666",
-      "cutprice":"4555"
+      "price":3437,
+      "cutprice":"4555",
+      "Color":"black",
+      "Type":"E1000 without Mic"
       
     },{
       "id": 5,
       "name":"CCA - CRA+",
       "detail":"True Wireless Earbuds",
       "url":"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Meze-99-Neo-1160-1160-2_400x.jpg?v=1591944478",
-      "price":"3666",
-      "cutprice":"4555"
+      "price":3345,
+      "cutprice":"4555",
+      "Color":"black",
+      "Type":"E1000 without Mic"
       
     },{
       "id": 6,
       "name":"LYPERTEK - PUREPLAY Z3",
       "detail":"True Wireless Earbuds",
       "url":"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Meze-99-Neo-1160-1160-2_400x.jpg?v=1591944478",
-      "price":"3666",
-      "cutprice":"4555"
+      "price":2345,
+      "cutprice":"4555",
+      "Color":"white",
+      "Type":"E1000 without Mic"
       
     },{
       "id": 7,
       "name":"LYPERTEK - PUREPLAY Z3",
       "detail":"True Wireless Earbuds",
       "url":"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Meze-99-Neo-1160-1160-2_400x.jpg?v=1591944478",
-      "price":"3666",
-      "cutprice":"4555"
+      "price":2345,
+      "cutprice":"4555",
+      "Color":"black",
+      "Type":"E1000 without Mic"
       
     },{
       "id": 8,
       "name":"LYPERTEK - PUREPLAY Z3",
       "detail":"True Wireless Earbuds",
       "url":"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Meze-99-Neo-1160-1160-2_400x.jpg?v=1591944478",
-      "price":"3666",
-      "cutprice":"4555"
+      "price":2345,
+      "cutprice":"4555",
+      "Color":"white",
+      "Type":"E1000 without Mic"
       
     },{
       "id": 9,
       "name":"LYPERTEK - PUREPLAY Z3",
       "detail":"True Wireless Earbuds",
       "url":"https://cdn.shopify.com/s/files/1/0153/8863/products/Headphone-Zone-Meze-99-Neo-1160-1160-2_400x.jpg?v=1591944478",
-      "price":"3666",
-      "cutprice":"4555"
+      "price":2345,
+      "cutprice":"4555",
+      "Color":"white",
+      "Type":"E1000 without Mic"
       
     }
   ]

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../style/Navbar.css'
-export const Navbar = () => {
+export const Navbar = ({item}) => {
   return (
     <div>
          <div className='navcontainer'>
@@ -21,10 +21,11 @@ Categories </Link>
 <div className='text'></div>
 
   <ul style={{width:"100%"}}>
-  <li>design</li>
-    <li>design</li>
-    <li>design</li> 
-  </ul></li>
+  <li>earphone</li>
+    <li>headphone</li>
+    <li>player</li> 
+  </ul>
+  </li>
 <div className='catediv'></div>
 <li>Brands
   <ul>
@@ -37,7 +38,17 @@ Categories </Link>
     <li>Astell&Kern</li>
   </ul>
 </li>
-<li>Price</li>
+<li>Price
+  <ul>
+  <li> 1Custom</li>
+    <li>64 Audio</li>
+    <li>Abyss</li>
+    <li>AIAIAI</li>
+    <li>AKG</li>
+    <li>ALO Audio</li>
+    <li>Astell&Kern</li>
+  </ul>
+</li>
 <li>Deals</li>
 <li id='phonefinder'>Headphone</li>
 <li>Events</li>
@@ -56,7 +67,7 @@ Categories </Link>
 <Link to='/loginpage'>Login</Link> 
 </div>
 <div className='rightside'>
-<Link to='/cart'>Cart</Link> 
+<Link to='/cart'>Cart {item}</Link> 
 </div>
 
 </div>
